@@ -1,6 +1,5 @@
-# Tinder 4 Animals
-A remake of the Tinder dating app, with a spin.
-Inspired by [Tinder for Bananas](https://tinderforbananas.com/)
+# PetFame
+Tinder 💖 for Dogs & Cats
 
 ## Mock ups
 
