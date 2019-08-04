@@ -1,0 +1,52 @@
+<div class="row nav-bar">
+  <div class="col-4 text-center">
+      <a href="/profile" class="nav-btn btn btn-secondary"><i class="fa fa-user-o fa-2x" aria-hidden="true"></i></a>
+  </div>
+  <div class="col-4 text-center">
+    <a href="/potentials" class="nav-tinder btn btn-secondary">
+      <img src="/images/logo-white.png">
+    </a>
+  </div>
+  <div class="col-4 text-center">
+    <a href="/chatroom" class="nav-btn btn btn-danger red-background"><p>...</p></a>
+  </div>
+</div>
+
+<br>
+
+<div class="container">
+  <h2 class="red"><strong>Messages</strong></h2>
+
+<% matches.forEach(function(match){ %>
+    <div class="row">
+      <div class="col-3">
+        <a href="/chatroom/<%=match.id%>"><img class="chatroom-pic rounded-circle img-fluid" src=<%=match.profile_pics[0].url%>></a>
+      </div>
+      <div class="col-9">
+        <h3>
+          <strong><%=match.name%></strong>
+        </h3>
+
+        <% function isValidChat(chat){ return chat.userIdTo === match.id; } %>
+        <% var currentUserValidChats = currentUser.chats.filter(isValidChat); %>
+
+        <% if(match.chats.length && currentUserValidChats.length){ %>
+          <% if(new Date(match.chats[match.chats.length-1].createdAt) >= new Date(currentUserValidChats[currentUserValidChats.length-1].createdAt)){ %>
+            <p class="gray"><%=match.chats[match.chats.length-1].content %></p>
+          <% } else { %>
+            <p class="gray"><i class="fa fa-reply" aria-hidden="true"></i>
+            <%=currentUserValidChats[currentUserValidChats.length-1].content %></p>
+          <% } %>
+        <% } else if(match.chats.length){ %>
+          <p class="gray"><%=match.chats[match.chats.length-1].content %></p>
+        <% } else if(currentUserValidChats.length) { %>
+          <p class="gray"><i class="fa fa-reply" aria-hidden="true"></i>
+          <%=currentUserValidChats[currentUserValidChats.length-1].content %></p>
+        <% } %>
+
+      </div>
+    </div>
+    <hr>
+  <% }) %>
+
+</div>

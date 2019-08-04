@@ -1,0 +1,73 @@
+<div class="container">
+    <h2>
+      <a href="/chatroom">
+            <i class="fa fa-angle-left black" aria-hidden="true"></i>
+      </a>
+      <img class="chatroom-pic-small rounded-circle img-fluid" src=<%= match.profile_pics[0].url %> >
+      <%= match.name %>
+    </h2>
+  <hr>
+
+  <div class="container chatlog">
+
+    <% var allChats = currentUser.chats.concat(match.chats);
+    allChats.sort(function(a,b){
+      return b.createdAt - a.createdAt;
+    }); %>
+
+    <% if(allChats.length){ %>
+      <% allChats.forEach(function(message){ %>
+        <% if(message.userId == currentUser.id){ %>
+          <div class="message-me text-right">
+            <div class="row">
+              <div class="offset-6 col-6 offset-sm-8 col-sm-4">
+              <p class="rounded">
+                <%=message.content%>
+                <br>
+                <small><%= moment(message.createdAt).fromNow() %></small>
+              </p>
+              </div>
+          </div>
+        <% } else { %>
+          <div class="message-potential text-left">
+            <div class="row">
+              <div class="col-2 col-sm-1">
+                <a href="/potentials/<%=match.id%>">
+                  <img class="chatroom-pic-xsmall rounded-circle" src=<%= match.profile_pics[0].url %> >
+                </a>
+              </div>
+              <div class="col-10 col-sm-11">
+              <p class="rounded">
+                <%=message.content%>
+                <br>
+                <small><%= match.name %> <%= moment(message.createdAt).fromNow() %></small>
+              </p>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      <% }); %>
+    <% } else { %>
+      <p class="gray"><i>Don't be shy, start a conversation!</i></p>
+    <% } %>
+
+
+  </div>
+
+
+  <hr>
+
+  <form method="POST" action="/chatroom/<%=match.id%>">
+      <div class="form-group row">
+        <div class="col-12 col-sm-11">
+          <input type="text" name="content" class="form-control form-control-lg" placeholder="Send a message...">
+        </div>
+        <div class="col-12 col-sm-1">
+          <button type="submit" class="btn btn-secondary">
+            <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+  </form>
+</div>

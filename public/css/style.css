@@ -1,0 +1,412 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+}
+
+footer {
+  /*position: fixed;*/
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2px;
+
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.modal {
+  background-color: rgba(0,0,0,0.6);
+}
+
+.get-tinder-plus .modal-content {
+  background-color: #F8F8F8;
+}
+
+.get-tinder-plus img {
+  width: 40%;
+}
+
+.btn-transparent {
+  border: 5px #bd362f solid;
+}
+
+.interest {
+  border: 1px #bd362f solid;
+  color: #bd362f;
+}
+
+.btn-transparent:hover {
+  color: lightGray;
+}
+
+.carousel {
+  margin: 3em auto;
+  height: 25em;
+}
+
+.carousel-inner > .item > a {
+    margin: 0 auto;
+}
+
+.carousel-item a {
+margin: auto;
+height: 25em;
+}
+
+.carousel-item img {
+margin: auto;
+height: 25em;
+}
+
+.like-text{
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 5px solid green;
+  color: green;
+  border-radius: 10px;
+  -ms-transform: rotate(336deg); /* IE 9 */
+  -webkit-transform: rotate(336deg); /* Chrome, Safari, Opera */
+  transform: rotate(336deg);
+  visibility: hidden;
+}
+
+.super-like-text {
+  position: absolute;
+  top: 20px;
+  left: 102px;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 5px solid  #0066ff;
+  color:  #0066ff;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+.nope-text {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 5px solid #bd362f;
+  color: #bd362f;
+  border-radius: 10px;
+  -ms-transform: rotate(23deg); /* IE 9 */
+  -webkit-transform: rotate(23deg); /* Chrome, Safari, Opera */
+  transform: rotate(23deg);
+  visibility: hidden;
+}
+
+.no-potentials {
+  text-align: center;
+  z-index: 0;
+  height: 75vh;
+}
+
+.potential-card-row {
+  width: 111vw;
+}
+
+.potential-card {
+  min-height: 520px;
+  max-width: 372px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #888888;
+  position:absolute;
+}
+
+.potential-card img{
+    height: 370px;
+    width: 370px;
+    border-radius: 10px;
+}
+
+.pic-show {
+  height: 400px;
+  width: 400px;
+}
+
+.current-user {
+  position: relative;
+  top: 700px;
+}
+
+.chatroom-pic {
+  width: 200px;
+  height: 200px;
+  border: 3px black solid;
+}
+
+.chatroom-pic-small {
+  width: 120px;
+  height: 120px;
+  border:  3px black solid;
+}
+
+.chatroom-pic-xsmall {
+  width: 70px;
+  height: 70px;
+  border:  3px black solid;
+}
+
+.profile-pic {
+  width: 200px;
+}
+
+.tinder-plus-alert {
+  display: none;
+}
+
+.login-btn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 10px auto;
+  display: block;
+  width: 50%;
+  border-radius: 40px;
+}
+
+.login-form {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px 0px;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.login-form label{
+  font-size: 1.2em;
+}
+
+.logo {
+  margin: 5px;
+  width: 50px;
+}
+
+.nav-btn {
+  border-radius: 50%;
+  width: 3.75em;
+  height: 3.75em;
+  background-color: lightGray;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.nav-btn i {
+  color: white;
+  line-height: inherit;
+}
+
+.nav-btn p {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+}
+
+.nav-tinder {
+  border-radius: 40px;
+  width: 120px;
+  height: 60px;
+  background-color: lightGray;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.nav-tinder img {
+  width: 30px;
+}
+
+.nav-bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.nav-bar-other {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.tinder-controls .btn {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.match .btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 0.8em;
+}
+
+.match-text {
+  font-family: 'Lobster', cursive;
+}
+
+.match-pic {
+  border-radius: 50%;
+  margin-top: 50px;
+  width: 300px;
+  height: 300px;
+  border: 10px lightGray solid;
+}
+
+.submit-btn {
+  border-radius: 10px;
+}
+
+.settings .btn {
+  width: 100%;
+  padding: 15px;
+}
+
+.message-me p {
+  border: 1px black solid;
+  margin: 5px;
+  padding: 5px;
+}
+
+.message-potential p {
+  background-color: #00cc99;
+  margin: 15px;
+  padding: 5px;
+  width: 30%;
+}
+
+.getNewPic {
+  position: absolute;
+  right: 148px;
+  bottom: -10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.revertPic {
+  position: absolute;
+  left: -2px;
+  top: -7px;
+  background-color: red;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: #bd362f;
+}
+
+.yellow {
+  color: 	#FFD700;
+}
+
+.green {
+  color:  #8ab92d;
+}
+
+.blue {
+  color: #0066ff;
+}
+
+.white {
+  color: white;
+}
+
+.gray {
+  color: gray;
+}
+
+.blue-background {
+  background-color: #0066ff;
+}
+
+.red-background {
+  background-color: #bd362f;
+}
+
+.green-background {
+  background-color: #8ab92d;
+}
+
+.white-background {
+  background-color: white;
+}
+
+.gray-background {
+  background-color: #F8F8F8;
+}
+
+@media (min-width: 361px) and (max-width: 414px) {
+  .potential-card-row {
+    width: 43vw;
+  }
+
+  .potential-card img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .potential-card {
+    min-height: 450px;
+    max-width: 302px;
+  }
+}
+
+@media (max-width:414px){
+
+  .chatroom-pic {
+    width: 73px;
+    height: 73px;
+  }
+
+  .message-potential p {
+    width: 50%;
+  }
+
+  .match-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .match .btn {
+    width: 80%;
+  }
+
+  .login-row {
+    margin: 5px;
+  }
+
+  .login-btn {
+    width: 70%;
+  }
+}
+
+@media (max-width: 360px) {
+  .potential-card-row {
+    width: 24vw;
+  }
+
+  .potential-card img {
+    height: 300px;
+    width: 300px;
+  }
+
+  .potential-card {
+    min-height: 450px;
+    max-width: 302px;
+  }
+}
